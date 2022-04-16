@@ -8,6 +8,7 @@
 
 body {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 100%;
 }
 
 /*==========================HEADER==========================*/
@@ -65,3 +66,140 @@ body {
 .divider {
   border-bottom: 1px solid rgb(185, 182, 182);
 }
+
+/*==========================Footer==========================*/
+
+.footer-container {
+  background-color: #161e2c;
+  color: white;
+  padding: 4rem 0;
+}
+
+.col-left .logo {
+  padding: 1rem 0;
+  border-bottom: 1px solid #4D525B;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 50px;
+  color: white;
+  margin-left: .8rem;
+}
+
+.footer-divider {
+  border-bottom: 2px solid #4D525B;
+  padding: 1rem .8rem;
+}
+
+.language, .support {
+  display: flex;
+  align-items: center;
+
+}
+
+.language span, .support span {
+  margin-left: .6rem;
+  font-size: .9rem;
+}
+
+.accordion {
+  background: transparent;
+}
+
+.stores img {
+  width: 120px;
+}
+
+.stores img:nth-child(1) {
+  margin: 0 .8rem;
+}
+
+.social-icons i {
+  color: white;
+  font-size: 1rem;
+}
+
+.aside {
+  margin: 1rem;
+}
+
+.user-info .count, .job-info .count {
+  margin-right: .6rem;
+  font-size: .9rem;
+}
+
+.text {
+  font-size: .9rem;
+  letter-spacing: 1px;
+  color: #c0c0c0;
+}
+
+.copyright {
+  font-size: .8rem;
+}
+
+/*==========================Footer==========================*/
+
+
+.modal {
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.login-splash img {
+  height: 100px;
+}
+
+.fb-login-btn {
+  border: transparent;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #3b5c9f;
+  padding: .8rem .6rem;
+}
+
+.fb-login-btn i {
+  margin-right: .4rem;
+}
+
+.login-divider-content .login-divider {
+  border: 1px solid #8a8a8a;
+  width: 100%;
+}
+
+.form .form-control::placeholder {
+  font-size: 1rem;
+}
+
+.form button {
+  font-weight: bold;
+}
+
+.forgot-pass {
+  color: #007fed;
+}
+
+.login-footer-divider {
+  border: 1px solid #96989b;
+  width: 100%;
+}
+
+.signup-link{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-link span:nth-child(2),.signup-aside small span{
+  color: #007fed;
+}
+
