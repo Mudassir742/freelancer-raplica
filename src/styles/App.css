@@ -3,3 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*==========================HEADER==========================*/
+.header {
+  height: 70px;
+}
+
+.modal-btns {
+  background-color: transparent;
+  border: transparent;
+  margin-right: 1rem;
+  font-size: 1.062rem;
+}
+
+/*==========================BANNER==========================*/
+
+.top-jobs {
+  font-size: 2rem;
+}
+
+.banner-container {
+  background-color: #007fed;
+  height: 170px;
+}
+
+
+.hire-btn {
+  border: 2px solid #F20091;
+  background-color: #F20091;
+}
+
+.work-btn{
+  border: 2px solid white;
+}
