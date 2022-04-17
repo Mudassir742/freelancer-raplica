@@ -1,0 +1,12 @@
+.jobs-content {
+    max-width: 1200px;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+}
+
+.filter-container{
+    width: 30%;
+    border: 2px solid red;
+}
+

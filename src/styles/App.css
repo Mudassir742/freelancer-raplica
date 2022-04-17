@@ -11,6 +11,10 @@ body {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*==========================HEADER==========================*/
 .header {
   height: 70px;
@@ -49,10 +53,12 @@ body {
   width: 120px;
 }
 
+
+
 /*==========================JOB SEARCH==========================*/
 
 .job-search {
-  height: 120px;
+  height: 70px;
 }
 
 .input-field input {
@@ -66,6 +72,11 @@ body {
 .divider {
   border-bottom: 1px solid rgb(185, 182, 182);
 }
+
+.search-btn, .online-jobs, .divider {
+  display: none;
+}
+
 
 /*==========================Footer==========================*/
 
@@ -192,14 +203,79 @@ body {
   width: 100%;
 }
 
-.signup-link{
+.signup-link {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 
-.signup-link span:nth-child(2),.signup-aside small span{
+.signup-link span:nth-child(2), .signup-aside small span {
   color: #007fed;
 }
 
+@media only screen and (min-width: 476px) {
+  .job-search {
+    height: 190px;
+  }
+
+  .divider {
+    display: block;
+  }
+
+  .input-content {
+    border: 1px solid rgb(185, 182, 182);
+  }
+
+  .online-jobs {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-btn {
+    display: block;
+    border: transparent;
+    background-color: #007fed;
+    color: white;
+    font-weight: bold;
+    font-size: 1.062rem;
+    letter-spacing: 1px;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .banner-container {
+    height: 140px;
+  }
+
+  .hire-btn, .work-btn {
+    height: 40px;
+  }
+
+  .job-search {
+    height: 70px;
+  }
+
+  .input-content {
+    border: none;
+    width: 85%;
+  }
+
+  .input-field {
+    flex: 1;
+    border-right: 1px solid rgb(185, 182, 182);
+
+  }
+
+  .online-jobs {
+    flex: 1;
+  }
+
+  .search-btn {
+    flex-direction: .6;
+    height: 100%;
+    width: 15%;
+  }
+
+}
