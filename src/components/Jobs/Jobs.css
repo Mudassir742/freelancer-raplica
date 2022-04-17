@@ -3,10 +3,46 @@
     width: 100%;
     border: 2px solid black;
     display: flex;
+    margin:1rem;
 }
+
+/*=============================Filter Section==========================*/
 
 .filter-container{
-    width: 30%;
-    border: 2px solid red;
+    width: 28%;
+    margin-right: 1.8rem;
 }
 
+.filter-divider{
+    border-bottom: 1px solid rgb(224, 223, 223);
+}
+
+
+
+.filter-container input[type=text]{
+    width: 67px;
+    height: 40px;
+    border-radius: none;
+    border: 1px solid rgb(206, 206, 206);;
+    margin: 1.3rem 0;
+    outline: none;
+    padding-left: .8rem;
+}
+
+.add-input{
+    border: 1px solid rgb(206, 206, 206);
+    height: 40px;
+    margin-top: 1rem;
+}
+.add-input input{
+    width: inherit;
+    height: 38px;
+    border: transparent;
+}
+.add-input span{
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    color: rgb(104, 104, 104);
+}

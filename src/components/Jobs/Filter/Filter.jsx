@@ -1,38 +1,44 @@
 import React from "react";
 
-const Filter = () => {
+const Filter = ({showFilters,setshowFilters}) => {
   return (
-    <div className="filter-container">
-      <div className="filter-content">
-        <div className="filter-header">
-          <h5 className="filter-heading">My recent searches</h5>
+    <div className="filter-container shadow d-flex align-items-center">
+      <div className="filter-content p-4 w-100">
+        <div className="filter-header mb-5">
+          <h5 className="filter-heading text-center">My recent searches</h5>
         </div>
-        <div className="filter-body">
+        <div className="filter-divider my-4"></div>
+
+        <div className="filter-body w-100">
           <div className="filter-options">
-            <h5>Filter by:</h5>
+            <h5 className="mb-4">Filter by:</h5>
             <div className="budget-filter">
-              <span>Budget</span>
+              <span className="fw-bold mb-3 d-block">Budget</span>
               <form className="budget-form">
-                <div className="price">
+                <div className="price d-flex align-items-center">
                   <input type="checkbox" id="checkbox" />
-                  <label htmlFor="checkbox">Fixed Price Projects</label>
-                  <div className="min-max">
-                    <input type="text" placeholder="min" />
-                    <span>to</span>
-                    <input type="text" placeholder="max" />
-                  </div>
+                  <label htmlFor="checkbox" className="mx-2 d-block">
+                    Fixed Price Projects
+                  </label>
                 </div>
-                <div className="price">
+                <div className="min-max d-flex align-items-center justify-content-between">
+                  <input type="text" placeholder="min" />
+                  <span>to</span>
+                  <input type="text" placeholder="max" />
+                </div>
+                <div className="price  d-flex align-items-center">
                   <input type="checkbox" id="checkbox" />
-                  <label htmlFor="checkbox">Hourly Projects</label>
-                  <div className="min-max">
-                    <input type="text" placeholder="min" />
-                    <span>to</span>
-                    <input type="text" placeholder="max" />
-                  </div>
+                  <label htmlFor="checkbox" className="mx-2 d-block">
+                    Hourly Projects
+                  </label>
+                </div>
+                <div className="min-max d-flex align-items-center justify-content-between">
+                  <input type="text" placeholder="min" />
+                  <span>to</span>
+                  <input type="text" placeholder="max" />
                 </div>
                 <select
-                  class="form-select form-select-sm"
+                  class="form-select form-select-sm py-2 mb-3"
                   aria-label=".form-select-sm example"
                 >
                   <option selected>All Durations</option>
@@ -40,93 +46,133 @@ const Filter = () => {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-                <div className="price">
+                <div className="price  d-flex align-items-center">
                   <input type="checkbox" id="checkbox" />
-                  <label htmlFor="checkbox">Contests</label>
-                  <div className="min-max">
-                    <input type="text" placeholder="min" />
-                    <span>to</span>
-                    <input type="text" placeholder="max" />
-                  </div>
+                  <label htmlFor="checkbox" className="mx-2 d-block">
+                    Contests
+                  </label>
                 </div>
-
-                <div className="filter-divider"></div>
+                <div className="min-max d-flex align-items-center justify-content-between">
+                  <input type="text" placeholder="min" />
+                  <span>to</span>
+                  <input type="text" placeholder="max" />
+                </div>
+                <div className="filter-divider my-4"></div>
                 <div className="types">
-                  <span>Type</span>
-                  <div className="price">
+                  <span className="d-block fw-bold mb-3">Type</span>
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">Local Jobs</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      Local Jobs
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">Featured Jobs</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      Feature Jobs
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">Recruiter Jobs</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      Recruiter Jobs
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">Full Time Jobs</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      Full Time Jobs
+                    </label>
                   </div>
                 </div>
-                <div className="filter-divider"></div>
+                <div className="filter-divider my-4"></div>
                 <div className="skills">
-                  <span>Skill</span>
-                  <div className="price">
+                  <span className="d-block fw-bold mb-3">Skill</span>
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">.NET 5.0/6</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      .NET 5.0/6
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">.NET</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      .NET
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">PHP</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      PHP
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">HTML</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      HTML
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">CSS</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      CSS
+                    </label>
                   </div>
-                  <div className="add-btn">
-                    <input type="button" placeholder="Or enter skills" />
+
+                  <div className="add-input d-flex align-items-center justify-content-between">
+                    <input
+                      type="text"
+                      placeholder="Or enter skill"
+                      className="m-0"
+                    />
+                    <span>+</span>
                   </div>
                 </div>
-                <div className="filter-divider"></div>
-                <div className="languages">
-                  <span>Type</span>
-                  <div className="price">
+                <div className="filter-divider my-4"></div>
+                <div className="skills">
+                  <span className="d-block fw-bold mb-3">Languages</span>
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">English</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      English
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">Spanish</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      Spanish
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">Gemran</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      German
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">French</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      French
+                    </label>
                   </div>
-                  <div className="price">
+                  <div className="price  d-flex align-items-center">
                     <input type="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox">Portuguese</label>
+                    <label htmlFor="checkbox" className="mx-2 d-block">
+                      Portuguese
+                    </label>
                   </div>
-                  <div className="add-btn">
-                    <input type="button" placeholder="Or enter skills" />
+                  <div className="add-input d-flex align-items-center justify-content-between">
+                    <input
+                      type="text"
+                      placeholder="Or enter skill"
+                      className="m-0 border-0"
+                    />
+                    <span>+</span>
                   </div>
                 </div>
-                <div className="filter-divider"></div>
+                <div className="filter-divider my-4"></div>
                 <div className="job-State">
-                  <span>Job State</span>
+                  <span className="fw-bold mb-3 d-block">Job State</span>
                   <div class="form-check">
                     <div className="radio-btns">
                       <input
@@ -134,8 +180,12 @@ const Filter = () => {
                         type="radio"
                         name="flexRadioDefault"
                         id="flexRadioDefault1"
+                        checked
                       />
-                      <label class="form-check-label" for="flexRadioDefault1">
+                      <label
+                        class="form-check-label fw-bold"
+                        for="flexRadioDefault1"
+                      >
                         All open jobs
                       </label>
                     </div>
@@ -147,8 +197,11 @@ const Filter = () => {
                         name="flexRadioDefault"
                         id="flexRadioDefault1"
                       />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        All open and closed <br/> jobs
+                      <label
+                        class="form-check-label fw-bold"
+                        for="flexRadioDefault1"
+                      >
+                        All open and closed <br /> jobs
                       </label>
                     </div>
                   </div>
