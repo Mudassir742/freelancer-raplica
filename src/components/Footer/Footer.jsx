@@ -7,8 +7,8 @@ import Android from "../../assets/imgs/andorid-playstore.png";
 
 const Footer = () => {
   return (
-    <section className="footer-container py-8">
-      <div>
+    <section className="footer-container d-flex align-items-center justify-content-center py-8">
+      <div className="footer-content w-100">
         <div className="col-left">
           <div className="logo">
             <img src={Logo} alt="logo" className="footer-logo" />
