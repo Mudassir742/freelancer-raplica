@@ -1,11 +1,18 @@
 import React from "react";
 
-const Filter = ({showFilters,setshowFilters}) => {
+const Filter = ({ showFilter, setshowFilter }) => {
+
   return (
-    <div className="filter-container shadow d-flex align-items-center">
-      <div className="filter-content p-4 w-100">
-        <div className="filter-header mb-5">
+    <div className={showFilter ? "filter-container" : "hidden"}>
+      <div className="filter-content p-4 w-100 shadow">
+        <div className="filter-header mb-5 d-flex align-items-center justify-content-between">
           <h5 className="filter-heading text-center">My recent searches</h5>
+          <div
+            className="filter-cross d-lg-none fs-2"
+            onClick={(e) => setshowFilter(false)}
+          >
+            x
+          </div>
         </div>
         <div className="filter-divider my-4"></div>
 

@@ -10,6 +10,7 @@ body {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 100%;
   background-color: #f0f0f0;
+  position: relative;
 }
 
 a {
@@ -21,7 +22,7 @@ a {
   height: 70px;
 }
 
-.header-content{
+.header-content {
   max-width: 1200px;
 }
 
@@ -38,11 +39,12 @@ a {
   font-size: 2rem;
 }
 
-.banner-content-container{
+.banner-content-container {
   max-width: 1200px;
-  
+  padding: 1rem;
 }
-.banner-parent{
+
+.banner-parent {
   background-color: #007fed;
   width: 100%;
 }
@@ -98,7 +100,8 @@ a {
   color: white;
   padding: 4rem 0;
 }
-.footer-content{
+
+.footer-content {
   max-width: 1200px;
 }
 
@@ -130,9 +133,16 @@ a {
   font-size: .9rem;
 }
 
-.accordion {
-  background: transparent;
+ul,li{
+  list-style-type: none;
 }
+
+.freelancer ul li,.about ul li,.terms ul li{
+  color: #BEC0C2;
+  font-size: .9rem;
+  margin-bottom: .1rem;
+}
+
 
 .stores img {
   width: 120px;
@@ -166,7 +176,11 @@ a {
   font-size: .8rem;
 }
 
-/*==========================Footer==========================*/
+.footer-navigation{
+  width: 80%;
+}
+
+/*==========================Modal==========================*/
 
 
 .modal {
@@ -230,6 +244,9 @@ a {
   color: #007fed;
 }
 
+
+/*=========================Media Query===========================*/
+
 @media only screen and (min-width: 476px) {
   .job-search {
     height: 190px;
@@ -256,6 +273,9 @@ a {
     font-weight: bold;
     font-size: 1.062rem;
     letter-spacing: 1px;
+  }
+  .footer-navigation{
+    width: 100%;
   }
 }
 
@@ -292,6 +312,12 @@ a {
     flex-direction: .6;
     height: 100%;
     width: 15%;
+  }
+  .footer-divider {
+    border: transparent;
+  }
+  .col-left .logo {
+    border: transparent;
   }
 
 }
