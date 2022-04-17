@@ -1,6 +1,6 @@
 import React from "react";
+import * as Icon from "@tabler/icons";
 
-import * as Icon from "@tabler/icons"
 import { jobListsData } from "../../../data/jobsData";
 
 const JobList = ({ showFilter, setShowFilter }) => {
@@ -11,50 +11,58 @@ const JobList = ({ showFilter, setShowFilter }) => {
           <span>12,092 jobs found, pricing in USD</span>
         </div>
         <div className="pagination d-none d-lg-flex">
-          <span><Icon.IconPlayerSkipBack size={20}/></span>
-          <span><Icon.IconCaretLeft size={24}/></span>
+          <span>
+            <Icon.IconPlayerSkipBack size={20} />
+          </span>
+          <span>
+            <Icon.IconCaretLeft size={24} />
+          </span>
           <span>1</span>
           <span>1</span>
           <span>1</span>
-          <span><Icon.IconCaretRight size={24}/></span>
-          <span><Icon.IconPlayerSkipForward size={20}/></span>
+          <span>
+            <Icon.IconCaretRight size={24} />
+          </span>
+          <span>
+            <Icon.IconPlayerSkipForward size={20} />
+          </span>
         </div>
         <div
           className="filter-button d-lg-none d-block"
           onClick={(e) => setShowFilter(!showFilter)}
         >
-          Filter
+          <Icon.IconAdjustmentsHorizontal/>
         </div>
       </div>
-      <div className="jobs-body mx-4 py-4 border-bottom">
-        <div className="job-content-container d-flex justify-content-between">
-          <div className="left-col">
-            <div className="job-heading-section d-flex align-items-center">
-              <span className="title fw-bold d-block">Customize vpn app</span>
-              <span className="time mx-2 d-block">6 days left</span>
+      {jobListsData &&
+        jobListsData.map((job, index) => {
+          return (
+            <div className="jobs-body mx-4 py-4 border-bottom">
+              <div className="job-content-container d-flex justify-content-between">
+                <div className="left-col">
+                  <div className="job-heading-section d-flex align-items-center">
+                    <span className="title fw-bold d-block">{job.title}</span>
+                    <span className="time mx-2 d-block">{job.time}</span>
+                  </div>
+                  <div className="job-description my-3">{job.description}</div>
+                  <div className="jobs-tag d-flex align-items-center flex-wrap">
+                    {job.tags &&
+                      job.tags.map((tag, tagIndex) => {
+                        return <span key={tagIndex}>{tag.tag}</span>;
+                      })}
+                  </div>
+                </div>
+                <div className="right-col">
+                  <span className="price fw-bold">{job.price}</span>
+                  <span className="d-none d-lg-block my-3">{job.bids}</span>
+                  <div className="bid-btn">
+                    <button>Bid now</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="job-description my-3">
-              I have a vpn app i want it to be customized from the previous
-              version of the code and add some features to it.Customize themeadd
-              buttons etc
-            </div>
-            <div className="jobs-tag d-flex align-items-center flex-wrap">
-              <span>Android Development</span>
-              <span>Android Development</span>
-              <span>Android Development</span>
-              <span>Android Development</span>
-              <span>Android Development</span>
-            </div>
-          </div>
-          <div className="right-col">
-            <span className="price fw-bold">$20 - $164 / hr</span>
-            <span className="d-none d-lg-block my-3">0 bids</span>
-            <div className="bid-btn">
-              <button>Bid now</button>
-            </div>
-          </div>
-        </div>
-      </div>
+          );
+        })}
     </div>
   );
 };

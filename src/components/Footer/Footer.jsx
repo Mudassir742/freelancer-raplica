@@ -23,7 +23,7 @@ const Footer = () => {
               <span>Help & Support</span>
             </div>
           </div>
-          <div className="footer-navigation my-4 d-md-flex  justify-content-evenly">
+          <div className="footer-navigation my-4 d-md-flex  justify-content-md-evenly">
             <div className="freelancer">
               <ul className="p-0">
                 <li className="list-heading text-light mb-2 fs-6">
@@ -66,18 +66,18 @@ const Footer = () => {
             </div>
 
             <div className="social">
-            <li className="list-heading text-light mb-3 fs-6 mx-3">Apps</li>
-             
+              <li className="list-heading text-light mb-3 fs-6">Apps</li>
+
               <div className="stores d-flex align-items-center">
                 <img src={Apple} alt="apple" />
                 <img src={Android} alt="android" />
               </div>
-              <div className="social-icons">
-                <i className="fa-brands fa-facebook"></i>
-                <i className="fa-brands fa-twitter-square"></i>
-                <i className="fa-brands fa-youtube"></i>
-                <i className="fa-brands fa-instagram"></i>
-                <i className="fa-solid fa-wifi"></i>
+              <div className="social-icons my-3 d-flex align-items-center justify-content-between">
+                <Icon.IconBrandFacebook />
+                <Icon.IconBrandInstagram />
+                <Icon.IconBrandYoutube />
+                <Icon.IconBrandTwitter />
+                <Icon.IconWifi />
               </div>
             </div>
           </div>

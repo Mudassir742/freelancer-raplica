@@ -133,11 +133,11 @@ a {
   font-size: .9rem;
 }
 
-ul,li{
+ul, li {
   list-style-type: none;
 }
 
-.freelancer ul li,.about ul li,.terms ul li{
+.freelancer ul li, .about ul li, .terms ul li {
   color: #BEC0C2;
   font-size: .9rem;
   margin-bottom: .1rem;
@@ -176,7 +176,7 @@ ul,li{
   font-size: .8rem;
 }
 
-.footer-navigation{
+.footer-navigation {
   width: 80%;
 }
 
@@ -274,7 +274,8 @@ ul,li{
     font-size: 1.062rem;
     letter-spacing: 1px;
   }
-  .footer-navigation{
+
+  .footer-navigation {
     width: 100%;
   }
 }
@@ -313,11 +314,23 @@ ul,li{
     height: 100%;
     width: 15%;
   }
+
   .footer-divider {
     border: transparent;
   }
+
   .col-left .logo {
     border: transparent;
   }
 
+}
+
+@media only screen and (max-width:768px) {
+  .footer-navigation {
+    margin-left: 1rem;
+  }
+
+  .social li {
+    margin: 0 0 1rem 0;
+  }
 }
